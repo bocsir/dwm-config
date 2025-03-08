@@ -1,5 +1,9 @@
 /* See LICENSE file for copyright and license details. */
 
+/* constants*/
+#define BROWSER "librewolf"
+#define SPOTIFY "spotify"
+
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx	 	= 5;        /* gap pixel between windows */
@@ -12,7 +16,7 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#23006B";
+static const char col_cyan[]        = "#740777";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -64,6 +68,8 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY, 			XK_w,	   spawn, 	   {.v = (const char*[]) { BROWSER, NULL } } },
+	{ MODKEY, 			XK_s,	   spawn,          {.v = (const char*[]) { SPOTIFY, NULL } } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
