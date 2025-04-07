@@ -1,8 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* constants*/
-#define BROWSER "librewolf"
+#define BROWSER "firefox"
 #define SPOTIFY "spotify"
+#define GODOT "godot"
+#define CODE "code"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -70,6 +72,8 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY, 			XK_w,	   spawn, 	   {.v = (const char*[]) { BROWSER, NULL } } },
 	{ MODKEY, 			XK_s,	   spawn,          {.v = (const char*[]) { SPOTIFY, NULL } } },
+	{ MODKEY, 			XK_g,	   spawn,          {.v = (const char*[]) { GODOT, NULL } } },
+	{ MODKEY, 			XK_c,	   spawn,          {.v = (const char*[]) { CODE, NULL } } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -105,7 +109,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      0)
 	TAGKEYS(                        XK_7,                      1)
 	TAGKEYS(                        XK_8,                      2)
